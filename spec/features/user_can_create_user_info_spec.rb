@@ -6,7 +6,7 @@ feature "User can create User info" do
     click_link "Create Account"
   end
 
-  xscenario "creates Login Info, Billing and Shipping Addresses" do
+  scenario "creates Login Info, Billing and Shipping Addresses" do
     find('input[type="text"][name*="user[first_name]"]').set("Jane")
     find('input[type="text"][name*="user[last_name]"]').set("Doe")
     find('input[type="text"][name*="user[email]"]').set("jane@doe.com")

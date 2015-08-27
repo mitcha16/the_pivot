@@ -30,7 +30,6 @@ feature "a visitor" do
 
     scenario "and sees product details" do
       visit product_path(product.id)
-      save_and_open_page
 
       expect(page).to have_content("Plant 1")
       expect(page).to have_content("This is the description for plant 1")
