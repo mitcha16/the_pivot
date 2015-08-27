@@ -47,11 +47,23 @@ def build_products
     description: "Herbs, herbs, herbs goodness."
   )
 
+  @store_one = Store.create(
+    id: 1,
+    farm_name: "Amaluna Farms",
+    facebook_url: "www.facebook.com",
+    photo_url: "farmers/spreading_ladybugs.jpg",
+    twitter_url: "www.twitter.com",
+    instagram_url: "www.instagram.com",
+    description: "Food and stuffs.",
+    url: "amaluna-farms"
+  )
+
   @fruit.products.create(
     name: "Fruit 1",
     description: "This is the description for fruit 1",
     price: 19.99,
-    image_url: "fruit/bananas.jpg")
+    image_url: "fruit/bananas.jpg",
+    store_id: @store_one.id)
   @fruit.products.create(
     name: "Fruit 2",
     description: "This is the description for fruit 2",
@@ -228,5 +240,24 @@ def build_farms
     #user_id: 1
   )
 end
+
+def build_categories
+  @category_one = Category.create(
+    id: 1,
+    name: "fruits",
+    description: "what it sounds like",
+    slug: "fruits"
+  )
+
+  @category_two = Category.create(
+    id: 2,
+    name: "vegitables",
+    description: "guess what it is?",
+    slug: "vegitables"
+  )
+end
+
+
+
 
 
